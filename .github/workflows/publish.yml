@@ -30,6 +30,8 @@ jobs:
   publish-pypi:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - uses: actions/download-artifact@v5
         with:
